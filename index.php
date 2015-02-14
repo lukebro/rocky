@@ -21,7 +21,8 @@ $PageLoad = microtime(true);
 
 function __autoload($class)
 {
-	require 'libs/'. $class . '.php';
+	if(file_exists('libs/'. $class . '.php'))
+		require 'libs/'. $class . '.php';
 }
 
 if(file_exists('conf/Config.local.php'))

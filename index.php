@@ -8,6 +8,10 @@
 ** businesslukebro@gmail.com
 **
 */
+if(file_exists('conf/Config.local.php'))
+	require 'conf/Config.local.php';
+else
+	require 'conf/Config.default.php';
 
 if(DEBUG) {
 	error_reporting(-1);
@@ -19,16 +23,15 @@ if(DEBUG) {
 
 $PageLoad = microtime(true);
 
-function __autoload($class)
-{
-	if(file_exists('libs/'. $class . '.php'))
-		require 'libs/'. $class . '.php';
-}
-
-if(file_exists('conf/Config.local.php'))
-	require 'conf/Config.local.php';
-else
-	require 'conf/Config.default.php';
+require 'libs/Auth.php';
+require 'libs/Bootstrap.php';
+require 'libs/Controller.php';
+require 'libs/Database.php';
+require 'libs/Debug.php';
+require 'libs/Model.php';
+require 'libs/Session.php';
+require 'libs/Validate.php';
+require 'libs/View.php';
 
 $app = new Bootstrap();
 

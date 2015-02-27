@@ -2,10 +2,11 @@
 
 class View
 {
-	public $_title, $_name, $_name_array, $_page, $_js, $_css, $_default_css, $_default_js, $_jquery, $_fonts, $_bootstrap, $_pdf;
+	public $_title, $_name, $_name_array, $_page, $_js, $_css, $_default_css, $_default_js, $_jquery, $_fonts, $_bootstrap, $_pdf, $_reset;
 	public function __construct()
 	{
 		$this->_title = '';
+		$this->_reset = true; // reset css margin/padding 
 		$this->_default_css = true; //display default_css by default
 		$this->_default_js = false; // display default_js by default
 		$this->_fonts = false; //display default_css by default

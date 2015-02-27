@@ -8,6 +8,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
 	<?php
+	if($this->_reset)
+    	echo '<link rel="stylesheet" type="text/css" href="'. ROOT . FS . ASSETS . FS .'styles' . FS . 'reset.css' . '">' . "\n";
 	if($this->_fonts)
     	echo '<link rel="stylesheet" type="text/css" href="'. ROOT . FS . ASSETS . FS .'styles' . FS . DEFAULT_FONTS . '">' . "\n";
 	if($this->_bootstrap)

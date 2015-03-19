@@ -1,1 +1,2 @@
-<footer>This is footer.</footer>
+<div class="container padding-sm text-center">
+Footer &copy; <?= date("Y") ?>

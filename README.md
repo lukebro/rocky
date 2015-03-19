@@ -13,6 +13,8 @@ class Sample_Model extends Model
 	function __construct()
 	{
 		parent::__construct();
+
+		$this->_var = "Hello world";
 	}
 	
 	public function getVar()
@@ -63,6 +65,8 @@ class Sample extends Controller
 	function alert($message)
 	{
 		$this->_view->msg = $message;
+
+		$this->_view->_title = $message;	
 		$this->_view->render($this->_controller_name . '/alert');
 	}
 }

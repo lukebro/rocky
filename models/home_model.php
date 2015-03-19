@@ -3,7 +3,7 @@
 class Home_Model extends Model
 {
 
-	private $_car;
+	private $_var;
 
 	function __construct()
 	{

@@ -16,6 +16,16 @@ class Validate
         return $result;
 	}
 
+	/**
+	 * Create a session token and store in $_SESSION["token"]
+	 */
+	public static function createToken()
+	{
+		$token = md5(uniqid(mt_rand(),true)); 
+		Session::set('token', $token);
+		return $token;
+	}
+
 	/*
 	*	Checks if format of string is valid.
 	*	@param String $string string to be validated

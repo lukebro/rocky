@@ -38,7 +38,7 @@ class Validate
 		return (preg_match('/^' . $pattern . '{'.$min.','.$max.'}$/', $string)) ? 1 : 0;
 	}
 
-	public static function filter($string, $pattern = '[a-zA-Z0-9]') {
-		return preg_replace('/^' . $pattern . '$/', "", $string);
+	public static function filter($string, $pattern = '[^a-zA-Z0-9$]') {
+		return preg_replace('/' . $pattern . '/', "", $string);
 	}
 }

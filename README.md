@@ -1,3 +1,8 @@
+# rocky 2.0 coming soon
+
+I wouldn't use this framework right now, I'm currently in the process of updating it to PRS-0, PRS-2 and PRS-4 standards.
+Until then!
+
 # rocky
 `rocky` is basic framework which uses a model-view-controller architectural pattern to easily create user inerfaces for web apps.
 
